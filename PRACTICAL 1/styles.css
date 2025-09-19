@@ -1,9 +1,8 @@
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(135deg, #a8edea, #fed6e3);
-
+    font-family: 'Times New Roman', serif;
+    background-color: #f5f5f5;
     margin: 0;
-    padding: 0;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,55 +10,64 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px 50px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 40px 60px;
+    border: 2px solid #333333;
+    box-shadow: 3px 3px 0px #000000;
     text-align: center;
-    width: 350px;
+    width: 400px;
 }
 
 h1 {
-    margin-bottom: 25px;
-    color: #333;
+    margin-bottom: 30px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: underline;
 }
 
 button {
-    border: none;
-    padding: 10px 18px;
-    margin: 8px;
-    border-radius: 8px;
+    border: 2px solid #000000;
+    padding: 12px 20px;
+    margin: 10px;
+    background-color: #ffffff;
     font-size: 16px;
     cursor: pointer;
-    color: white;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #000000;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 button:nth-child(2) {
-    background-color: #4ecdc4; /* Teal */
-    color: white;
+    background-color: #e6f3ff;
 }
 
 button:nth-child(3) {
-    background-color: #ff6b9d; /* Rose pink */
+    background-color: #ffe6f3;
 }
 
 button:nth-child(4) {
-    background-color: #45b7d1; /* Sky blue */
+    background-color: #f3ffe6;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: #dddddd;
+    border-color: #666666;
 }
 
 h2 {
-    margin-top: 25px;
-    color: #444;
+    margin-top: 30px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 p {
     font-size: 18px;
-    margin: 6px 0;
-    font-weight: bold;
+    margin: 10px 0;
+    font-weight: normal;
+    color: #333333;
+    font-family: 'Times New Roman', serif;
 }
