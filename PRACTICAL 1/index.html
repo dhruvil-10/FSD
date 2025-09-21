@@ -3,20 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Programming Language Voting System</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </head>
 <body>
+    <div class="background-pattern"></div>
     <div class="container">
-        <h1>Vote For Your Favourite Language</h1>
-        <button onclick="votes('Javascript')">Javascript</button>
-        <button onclick="votes('Python')">Python</button>
-        <button onclick="votes('Java')">Java</button>
-        <h2>Results:</h2>
-        <p>Javascript <span id="jsvotes">0</span> votes</p>
-        <p>Python <span id="pyvotes">0</span> votes</p>
-        <p>Java <span id="jvotes">0</span> votes</p>
+        <div class="header">
+            <h1>Choose Your Favorite Programming Language</h1>
+            <p class="subtitle">Cast your vote and see what the community thinks</p>
+        </div>
+        
+        <div class="voting-section">
+            <div class="button-group">
+                <button class="vote-btn javascript-btn" onclick="votes('Javascript')">
+                    <span class="btn-text">JavaScript</span>
+                    <span class="btn-description">Dynamic & Versatile</span>
+                </button>
+                <button class="vote-btn python-btn" onclick="votes('Python')">
+                    <span class="btn-text">Python</span>
+                    <span class="btn-description">Simple & Powerful</span>
+                </button>
+                <button class="vote-btn java-btn" onclick="votes('Java')">
+                    <span class="btn-text">Java</span>
+                    <span class="btn-description">Robust & Scalable</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>Live Results</h2>
+            <div class="results-container">
+                <div class="result-item javascript-result">
+                    <div class="result-header">
+                        <span class="language-name">JavaScript</span>
+                        <span class="vote-count" id="jsvotes">0</span>
+                    </div>
+                    <div class="vote-bar">
+                        <div class="vote-progress javascript-progress" id="js-progress"></div>
+                    </div>
+                </div>
+                <div class="result-item python-result">
+                    <div class="result-header">
+                        <span class="language-name">Python</span>
+                        <span class="vote-count" id="pyvotes">0</span>
+                    </div>
+                    <div class="vote-bar">
+                        <div class="vote-progress python-progress" id="py-progress"></div>
+                    </div>
+                </div>
+                <div class="result-item java-result">
+                    <div class="result-header">
+                        <span class="language-name">Java</span>
+                        <span class="vote-count" id="jvotes">0</span>
+                    </div>
+                    <div class="vote-bar">
+                        <div class="vote-progress java-progress" id="java-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
