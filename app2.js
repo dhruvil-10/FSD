@@ -13,11 +13,11 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded())
 
 app.get('/', (req,res) => {
-    res.send("Hello PATEL OM!!!")
+    res.send("Hello Dhruvil!!!")
 })
 
 app.get('/homepage', (req,res) => {
-    res.render('home', {myname: "Om Patel"})
+    res.render('home', {myname: "Dhruvil"})
 })
 
 app.get('/marksheet', (req, res) => {

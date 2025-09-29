@@ -9,7 +9,7 @@ app.set('view engine','ejs')
 app.use(express.urlencoded())
 
 app.get('/', (req,res)=> {
-    res.send("Om Patel Hello?!!?")
+    res.send("Dhruvil Hello?!!?")
 })
 
 app.get('/income', (req,res)=> {

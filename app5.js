@@ -7,11 +7,11 @@ app.set('views',__dirname+'/views')
 app.set('view engine','ejs')
 
 app.get('/', (req,res)=> {
-    res.send("Hii Om Patel!!!")
+    res.send("Hii Dhruvil!!!")
 })
 
 app.get('/homedashboard', (req,res)=> {
-    res.render('homedashboard', {name: "Om"})
+    res.render('homedashboard', {name: "Dhruvil"})
 })
 
 app.listen(port, ()=> {

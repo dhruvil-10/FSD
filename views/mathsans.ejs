@@ -1,69 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Maths Result</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        h1 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        .result {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            width: 400px;
-            color: white;
-        }
-        .result p {
-            font-size: 1.1rem;
-            margin: 15px 0;
-            padding: 10px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-        }
-        a {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            text-decoration: none;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            font-weight: 600;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(238,90,36,0.3);
-        }
+        body { font-family: Arial, sans-serif; margin: 50px; background-color: #f5f5f5; }
+        .container { max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #333; margin-bottom: 30px; }
+        .result { margin: 10px 0; padding: 10px; background-color: #f8f9fa; border-left: 4px solid #007bff; }
+        .back-btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px; }
+        .back-btn:hover { background-color: #545b62; }
     </style>
 </head>
 <body>
-    <h1>Results</h1>
-    <div class="result">
-        <p><strong>First Number:</strong> <%= a %></p>
-        <p><strong>Second Number:</strong> <%= b %></p>
-        <p><strong>Addition:</strong> <%= add %></p>
-        <p><strong>Subtraction:</strong> <%= sub %></p>
-        <p><strong>Multiplication:</strong> <%= mul %></p>
-        <p><strong>Division:</strong> <%= div %></p>
+    <div class="container">
+        <h1>Results</h1>
+        <div class="result"><strong>First Number:</strong> <%= a %></div>
+        <div class="result"><strong>Second Number:</strong> <%= b %></div>
+        <div class="result"><strong>Addition:</strong> <%= add %></div>
+        <div class="result"><strong>Subtraction:</strong> <%= sub %></div>
+        <div class="result"><strong>Multiplication:</strong> <%= mul %></div>
+        <div class="result"><strong>Division:</strong> <%= div %></div>
+        <a href="/maths" class="back-btn">Calculate Again</a>
     </div>
-    <a href="/maths">Go Back</a>
 </body>
 </html>
