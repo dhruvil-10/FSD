@@ -1,0 +1,83 @@
+.student-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 200px;
+}
+
+.student-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+.student-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.avatar-text {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.student-details {
+  flex: 1;
+}
+
+.student-name {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.student-id {
+  margin: 0 0 6px 0;
+  color: #667eea;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.student-course {
+  margin: 0 0 6px 0;
+  color: #5a6c7d;
+  font-size: 14px;
+}
+
+.student-institute {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .student-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+  
+  .student-name {
+    font-size: 24px;
+  }
+}

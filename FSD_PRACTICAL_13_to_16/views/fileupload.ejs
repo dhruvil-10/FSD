@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Upload</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffeaa7;
+      margin: 0;
+      padding: 50px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      border: 2px solid #e17055;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: #e17055;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    input[type="file"] {
+      margin: 15px 0;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #e17055;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #d63031;
+    }
+
+    .message {
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    .error {
+      background-color: #fab1a0;
+      color: #d63031;
+    }
+
+    .success {
+      background-color: #a8e6cf;
+      color: #00b894;
+    }
+
+    .info {
+      color: #636e72;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Upload PDF / PNG</h1>
+
+    <% if (message) { %>
+      <div class="message <%= message.toLowerCase().includes('success') ? 'success' : 'error' %>"><%= message %></div>
+    <% } %>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="fileupload" accept=".pdf,.png" required>
+      <button type="submit">Upload</button>
+    </form>
+
+    <div class="info">Allowed: PDF, PNG • Max size: 2MB</div>
+
+    <% if (files && files.length) { %>
+      <h2 style="font-size:16px; margin-top:18px; color:#2d3436">Uploaded files</h2>
+      <ul style="list-style:none; padding:0; text-align:left; max-width:300px; margin:0 auto;">
+        <% files.forEach(function(f){ %>
+          <li style="margin:6px 0; background:#f1f2f6; padding:8px; border-radius:4px; display:flex; justify-content:space-between; align-items:center;">
+            <a href="<%= f.url %>" target="_blank" style="color:#0984e3; text-decoration:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:180px; display:inline-block;"><%= f.name %></a>
+            <a href="<%= f.url %>" download style="background:#00b894; color:#fff; padding:6px 8px; border-radius:4px; text-decoration:none; font-size:12px;">Download</a>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </div>
+</body>
+</html>
