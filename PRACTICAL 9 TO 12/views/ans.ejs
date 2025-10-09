@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .result-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            color: white;
+            box-shadow: 0 10px 20px rgba(240, 147, 251, 0.3);
+        }
+        
+        .result-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .total-result {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(67, 233, 123, 0.3);
+        }
+        
+        .grade {
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 12px 25px;
+            background: linear-gradient(45ff, #6c757d, #495057);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(108, 117, 125, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Marksheet Results</h1>
+        
+        <div class="result-card">
+            <div class="result-item">
+                <strong>Subject 1:</strong> <%= mysub1 %> marks
+            </div>
+            <div class="result-item">
+                <strong>Subject 2:</strong> <%= mysub2 %> marks
+            </div>
+        </div>
+        
+        <div class="total-result">
+            <div>🏆 Total Marks: <%= result %></div>
+            <div class="grade">
+                <% if (result >= 90) { %>
+                    A+ Grade! 🌟
+                <% } else if (result >= 80) { %>
+                    A Grade! ⭐
+                <% } else if (result >= 70) { %>
+                    B Grade! 👍
+                <% } else if (result >= 60) { %>
+                    C Grade! 📚
+                <% } else { %>
+                    Keep trying! 💪
+                <% } %>
+            </div>
+        </div>
+        
+        <a href="/marksheet" class="back-btn">Calculate Again 🔄</a>
+        <br>
+        <a href="/" class="back-btn">← Home</a>
+    </div>
+</body>
+</html>

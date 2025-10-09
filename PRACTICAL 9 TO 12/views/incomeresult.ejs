@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .income-breakdown {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            color: #333;
+            box-shadow: 0 10px 20px rgba(168, 237, 234, 0.3);
+        }
+        
+        .income-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .total-income {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(67, 233, 123, 0.3);
+        }
+        
+        .celebration {
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin: 1rem 0.5rem;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #6c757d, #495057);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(108, 117, 125, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Income Results</h1>
+        
+        <div class="income-breakdown">
+            <div class="income-item">
+                <strong>Primary Income:</strong> $<%= s1 %>
+            </div>
+            <div class="income-item">
+                <strong>Secondary Income:</strong> $<%= s2 %>
+            </div>
+        </div>
+        
+        <div class="total-income">
+            <div>🎯 Total Monthly Income: $<%= total %></div>
+            <div class="celebration">
+                <% if (total >= 5000) { %>
+                    Excellent! 🎉
+                <% } else if (total >= 3000) { %>
+                    Great job! 👏
+                <% } else if (total >= 1000) { %>
+                    Good start! 💪
+                <% } else { %>
+                    Keep growing! 🚀
+                <% } %>
+            </div>
+        </div>
+        
+        <a href="/income" class="back-btn">Calculate Again 🔄</a>
+        <a href="/" class="back-btn">← Home</a>
+    </div>
+</body>
+</html>
